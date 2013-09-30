@@ -9,6 +9,8 @@ gem 'rails', '4.0.0'
 # replacing SQLite w/ PostgreSQL
 gem 'pg'
 
+gem 'sorcery'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
