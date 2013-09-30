@@ -4,7 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+
+# replacing SQLite w/ PostgreSQL
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -43,3 +46,20 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :tools do
+  gem 'guard-rspec' # automatically runs our tests whenever there have been changes made to them
+end
+
+group :development do
+  gem 'rspec-rails', '~> 2.0' # using rspec instead of test unit
+  gem 'better_errors' # makes the errors we see in the browser more descriptive
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+end
+
+group :test do 
+  gem 'rspec-rails', '~> 2.0' # using rspec instead of test unit
+  gem 'factory_girl_rails' 
+  gem 'capybara' # needed for our integration tests, which we'll talk about more later
+end
